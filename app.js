@@ -1,12 +1,10 @@
 const express = require('express');
 const app = express();
-
+const users = [
+  { id: 1, name: 'taha' },
+  { id: 2, name: 'mansoor' },
+];
 app.get('/users', (req, res) => {
-  const users = [
-    { id: 1, name: 'taha' },
-    { id: 2, name: 'mansoor' },
-  ];
-
   res.send(JSON.stringify(users));
 });
 
